@@ -8,7 +8,7 @@ let createNewUser = async (data) => {
       let hashPassWordFromDB = await hashUserPassWord(data.password);
       await db.User.create({
         email: data.email,
-        passworld: hashPassWordFromDB,
+        password: hashPassWordFromDB,
         firstName: data.firstName,
         lastName: data.lastName,
         address: data.address,
